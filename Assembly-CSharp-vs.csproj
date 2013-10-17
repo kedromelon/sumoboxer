@@ -47,6 +47,7 @@
      <Compile Include="Assets\scripts\DontGoThroughThings.cs" />
      <Compile Include="Assets\scripts\blueplayer.cs" />
      <Compile Include="Assets\scripts\bluespawn.cs" />
+     <Compile Include="Assets\scripts\cameraswitch.cs" />
      <Compile Include="Assets\scripts\platform.cs" />
      <Compile Include="Assets\scripts\redplayer.cs" />
      <Compile Include="Assets\scripts\redspawn.cs" />

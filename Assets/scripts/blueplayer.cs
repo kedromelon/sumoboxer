@@ -41,16 +41,16 @@ public class blueplayer : MonoBehaviour {
 			onGround = false;	
 		}
 		
-		if(Input.GetKey(KeyCode.LeftArrow)){
+		if(Input.GetKey(KeyCode.J)){
 			rigidbody.AddRelativeForce(Vector3.left * speed);
 		}
-		if(Input.GetKey(KeyCode.RightArrow)){
+		if(Input.GetKey(KeyCode.L)){
 			rigidbody.AddRelativeForce(Vector3.right * speed);
 		}
-		if(Input.GetKeyDown(KeyCode.UpArrow)){
+		if(Input.GetKeyDown(KeyCode.I)){
 			Jump();
 		}
-		if(Input.GetKey(KeyCode.DownArrow)){
+		if(Input.GetKey(KeyCode.K)){
 			rigidbody.AddRelativeForce(Vector3.down * speed * 3);
 		}	
 	}
