@@ -95,6 +95,7 @@ public class redplayer : MonoBehaviour {
 				if ( Mathf.Abs(rigidbody.velocity.x) > Mathf.Abs(other.rigidbody.velocity.x) ){
 						
 					other.rigidbody.velocity = Vector3.zero;
+					StartCoroutine("Pause", .035f);
 					other.rigidbody.AddForce(new Vector3(Mathf.Clamp(rigidbody.velocity.x * 6, -50f, 50f), 0f, 0f), ForceMode.Impulse);
 					rigidbody.velocity = Vector3.zero;
 						
@@ -109,6 +110,16 @@ public class redplayer : MonoBehaviour {
 		othertext.text = deaths.ToString();
 		spawner.GetComponent<redspawn>().Spawn();
 		
+	}
+	
+	private IEnumerator Pause(float p){
+	    Time.timeScale = 0f;
+	    float pauseEndTime = Time.realtimeSinceStartup + p;
+	    while (Time.realtimeSinceStartup < pauseEndTime)
+	    {
+	        yield return 0;
+	    }
+	    Time.timeScale = 1;
 	}
 	
 	
